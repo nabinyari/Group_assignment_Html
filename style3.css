@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("images/giftcard2.jpg");
+    background-size: cover;
+
+}
+
+.gift-card {
+    width: 350px;
+    background: goldenrod;
+    color:black;
+    font-weight: 600;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 60px;
+    margin-right: 20;
+    margin-bottom: 10;
+    margin-bottom: 10;
+}
+
+
+.gift-amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.gift-code {
+    background:lightgreen;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.redeem-btn {
+    display: block;
+    margin: 20px auto 0;
+    background: white;
+    color: red;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.redeem-btn:hover 
+{
+    background:pink;
+}
