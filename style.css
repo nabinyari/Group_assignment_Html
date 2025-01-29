@@ -309,3 +309,60 @@ span
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+.part-back
+{
+    height:40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MPN1:hover
+{
+    font-style: italic;
+}
+.MPN1:active
+{
+    color: rgb(80, 32, 143);
+}
+.footer-panel
+{
+    background-color:  rgb(41, 69, 93);
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul
+{
+    margin-top: 20px;
+}
+ul a
+{
+    display: block;
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-top: 8px;
+}
+.copy-panel
+{
+    height: 90px;
+    color: white;
+    background-color: #131A22;
+    display: flex;
+    justify-content: center;
+}
+.last-div
+{
+    margin-top: 20px;
+}
+.follow
+{
+font-style: italic;
+font-size: 1rem;
+color: #cccccc;
+}
+.follow:hover
+{
+    font-weight: bold;
+    color: red;
+}
