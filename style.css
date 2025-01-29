@@ -149,3 +149,163 @@ span
 {
     margin-left: 15px;
 }
+/* Hero-section */
+.hero-section
+{
+    height: 400px;   
+    background-size: cover;
+    background-image: url("images/back_img1.jpg");
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end;
+
+}
+.message
+{
+    background-color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    width: 98%;
+    margin-bottom: 25px;
+}
+
+/* part-shop */
+.shop
+{
+    background-color: #9ddae3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.box
+{
+    height: 450px;
+    width: 23%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px 0px 15px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.cart-button
+{
+    color: #007185;
+    margin-left: 150px;
+}
+.cart-button:hover
+{
+    color: black;
+    background-color: greenyellow;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: 10px;
+}
+
+.item-content
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.SP1
+{
+    font-weight: bold;
+}
+.shoe-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/shoe.jpg");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.watch-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/watch.webp");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.pant-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/paint_image.avif");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.iphone-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/iphone-image.webp");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.laptop-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/laptop.jpg");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.jacket-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/jacket.webp");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.side_bag-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/side_bag.webp");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.underware-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/underware.jpg");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.sawal-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/sawal.jpg");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.sari-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/sari.webp");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.tops-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/tops.jpg");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.jeans-image
+{
+    height: 300px;
+    background-size: cover;
+    background-image: url("images/jeans.jpg");
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
