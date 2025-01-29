@@ -1,0 +1,151 @@
+*
+{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+}
+.navbar
+{
+    height:70px;
+    background-color: rgb(41, 69, 93);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.part-logo
+{
+    height: 50px;
+    width: 170px;
+}
+.logo
+{
+    background-size: cover;
+    background-image: url("images/logo.png");
+    height: 50px;
+    width: 170px;
+}
+.border
+{
+    border: 2px solid transparent;
+}
+.border:hover
+{
+    border: 3px solid white;
+}
+.border1:hover
+{
+    border: 3px solid black;
+}
+.N01
+{
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+.N02
+{
+    font-size: 1rem;
+    margin-left: 5px;
+}
+.add-icon
+{
+    display: flex;
+    align-items: center;
+}
+a
+{
+    color: white;
+    text-decoration: none;
+}
+
+/* Part 2 */
+
+.part-search
+{
+    display: flex;
+    justify-content: space-evenly;
+    height: 40px;
+    width: 620px;
+    border-radius: 5px;
+}
+.part-search:hover
+{
+    border: 2px solid #e86609;
+}
+.select-items
+{
+    background-color: #cccccc;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    overflow: scroll;
+}
+.search-item
+{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+.search-icon
+{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: black;
+    background-color: #febd68;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* Part 3 */
+span
+{
+    font-size: 0.7rem;
+}
+.N03
+{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Part Cart */
+.part-cart
+{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+}
+.cart-icon
+{
+    font-size: 2rem;
+}
+#M01
+{
+    font-weight: bold;
+}
+.panel
+{
+    height:40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.part-selection
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-left: 25px;
+    font-size: 0.85rem;
+}
+.part-selection a
+{
+    margin-left: 15px;
+}
