@@ -136,17 +136,10 @@ span
     display: flex;
     align-items: center;
 }
-.part-selection
+
+.part-selection p
 {
     color: white;
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin-left: 25px;
-    font-size: 0.85rem;
-}
-.part-selection a
-{
     margin-left: 15px;
 }
 /* Hero-section */
