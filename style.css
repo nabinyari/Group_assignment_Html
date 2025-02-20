@@ -136,8 +136,17 @@ span
     display: flex;
     align-items: center;
 }
+.part-selection
+{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-left: 25px;
+    font-size: 0.85rem;
+}
 
-.part-selection p
+.part-selection a
 {
     color: white;
     margin-left: 15px;

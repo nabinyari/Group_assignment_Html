@@ -15,7 +15,7 @@
                 </div>
             </a>
 
-            <a href="https://www.google.com/maps" target="_main">
+            <a href="https://www.google.com/maps">
                 <div class="part-dilivery border">
                     <p class="N01">Deliver</p>
                     <div class="add-icon">
@@ -35,14 +35,14 @@
                 </div>
             </div>
 
-            <a href="index2.html" target="_main">
+            <a href="index2.html">
                 <div class="part-logn border">
                     <p><span>Sign in</span></p>
                     <p class="N03">Log in </p>
                 </div>
             </a>
 
-            <a href="index2.html" target="_main">
+            <a href="index2.html">
                 <div class="part-returns border">
                     <p><span>Returns</span></p>
                     <p class="N03"> & Orders</p>
@@ -269,5 +269,43 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".add-to-cart");
+        
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const productName = this.getAttribute("data-name");
+                    const price = this.getAttribute("data-price");
+        
+                    fetch("cart.php", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                        body: `product_name=${productName}&price=${price}`
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert("Product added to cart!");
+                            updateCartCount();
+                        } else {
+                            alert(data.message);
+                        }
+                    });
+                });
+            });
+        
+            function updateCartCount() {
+                fetch("cart.php?cart_count=true")
+                .then(response => response.text())
+                .then(count => {
+                    document.getElementById("cart-count").textContent = count;
+                });
+            }
+        
+            updateCartCount(); // Update cart count on page load
+        });
+        </script>
+        
 </body>
 </html>
