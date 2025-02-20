@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url("images/cart_bk.jpg");
+    background-size: cover;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+a {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+a:hover {
+    color: #b02a37;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+}
+
+a[href="index11.html"] {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a[href="index11.html"]:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        padding: 0 10px;
+    }
+
+    li {
+        padding: 10px;
+        font-size: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    li {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    a[href="index11.html"] {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

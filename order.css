@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url("images/order_bk.jpg");
+    background-size: cover;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+    flex-wrap: wrap;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+.order-info {
+    flex: 1;
+    text-align: left;
+    padding: 5px 10px;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.status-ordered {
+    background-color: #007bff;
+}
+
+.status-returned {
+    background-color: #dc3545;
+}
+
+button {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    margin: 20px 0;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    li {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    li {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

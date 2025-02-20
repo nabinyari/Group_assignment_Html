@@ -1,49 +1,70 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "mpn");
+include 'config.php';  // Connect to database
 
-if (!$conn) {
-    die(json_encode(["success" => false, "message" => "Database connection failed"]));
+// Add to cart
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_cart'])) {
+    $item_name = $_POST['item_name'];
+    $price = $_POST['price'];
+
+    $_SESSION['cart'][] = ['item_name' => $item_name, 'price' => $price];
+    header("Location: cart.php");
+    exit();
 }
 
-// Add to Cart
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["product_name"])) {
-    if (!isset($_SESSION["user_id"])) {
-        echo json_encode(["success" => false, "message" => "Please log in first!"]);
-        exit;
-    }
-
-    $user_id = $_SESSION["user_id"];
-    $product_name = $_POST["product_name"];
-    $price = $_POST["price"];
-
-    // Check if product exists in cart
-    $check_sql = "SELECT * FROM cart WHERE user_id = '$user_id' AND product_name = '$product_name'";
-    $result = mysqli_query($conn, $check_sql);
-
-    if (mysqli_num_rows($result) > 0) {
-        $update_sql = "UPDATE cart SET quantity = quantity + 1 WHERE user_id = '$user_id' AND product_name = '$product_name'";
-        mysqli_query($conn, $update_sql);
-    } else {
-        $insert_sql = "INSERT INTO cart (user_id, product_name, price, quantity) VALUES ('$user_id', '$product_name', '$price', 1)";
-        mysqli_query($conn, $insert_sql);
-    }
-
-    echo json_encode(["success" => true]);
-    exit;
+// Remove item from cart
+if (isset($_GET['remove'])) {
+    $index = $_GET['remove'];
+    unset($_SESSION['cart'][$index]);
+    $_SESSION['cart'] = array_values($_SESSION['cart']);
+    header("Location: cart.php");
+    exit();
 }
 
-// Fetch Cart Count
-if (isset($_GET["cart_count"])) {
-    if (!isset($_SESSION["user_id"])) {
-        echo "0";
-        exit;
+// Checkout (Place Order)
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['checkout'])) {
+    $user_id = 1;  // Example user ID, replace with dynamic login user ID
+
+    foreach ($_SESSION['cart'] as $item) {
+        $item_name = $item['item_name'];
+        $price = $item['price'];
+        $query = "INSERT INTO orders (user_id, item_name, price) VALUES ('$user_id', '$item_name', '$price')";
+        mysqli_query($conn, $query);
     }
 
-    $user_id = $_SESSION["user_id"];
-    $result = mysqli_query($conn, "SELECT COUNT(*) AS count FROM cart WHERE user_id = '$user_id'");
-    $row = mysqli_fetch_assoc($result);
-    echo $row["count"];
-    exit;
+    unset($_SESSION['cart']);
+    header("Location: orders.php");
+    exit();
 }
 ?>
+
+<!-- Cart Display -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart - MPN</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <h1>Your Shopping Cart</h1>
+
+    <?php if (!empty($_SESSION['cart'])): ?>
+        <ul>
+            <?php foreach ($_SESSION['cart'] as $index => $item): ?>
+                <li>
+                    <?= htmlspecialchars($item['item_name']) ?> - €<?= htmlspecialchars($item['price']) ?>
+                    <a href="cart.php?remove=<?= $index ?>">Remove</a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <form method="post">
+            <button type="submit" name="checkout">Checkout</button>
+        </form>
+    <?php else: ?>
+        <p>Your cart is empty.</p>
+    <?php endif; ?>
+
+    <a href="index11.html">← Continue Shopping</a>
+</body>
+</html>
