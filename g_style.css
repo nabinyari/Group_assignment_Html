@@ -104,9 +104,48 @@ body
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* Responsive Design */
-@media (max-width: 500px) {
+/* Responsive for Tablets */
+@media (max-width: 768px) {
     .checkout-form {
         width: 90%;
+        padding: 40px;
+    }
+
+    .checkout-form h2 {
+        font-size: 20px;
+    }
+
+    .checkout-form input,
+    .checkout-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Responsivefor Smartphones */
+@media (max-width: 480px) {
+    .checkout-form {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .checkout-form h2 {
+        font-size: 18px;
+    }
+
+    .checkout-form input,
+    .checkout-form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .popup button {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }

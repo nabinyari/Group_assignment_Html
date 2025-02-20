@@ -37,12 +37,12 @@ if ($result->num_rows === 1) {
     $stmt->bind_param("sd", $email, $amount);
 
     if ($stmt->execute()) {
-        header("Location: gift_card.php?message=Success! Gift Card Purchased.&type=success");
+        header("Location: gift_card.html?message=Success! Gift Card Purchased.&type=success");
     } else {
-        header("Location: gift_card.php?message=Error: Purchase failed.&type=error");
+        header("Location: gift_card.html?message=Error: Purchase failed.&type=error");
     }
 } else {
-    header("Location: gift_card.php?message=Error: Email not found in database.&type=error");
+    header("Location: gift_card.html?message=Error: Email not found in database.&type=error");
 }
 
 exit();

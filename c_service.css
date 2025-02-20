@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    background-image: url("images/c_service.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: darken;
+}
+
+/* Form container */
+form {
+    background: rgba(255, 255, 255, 0.5); /* Reducing opacity*/
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: left;
+    backdrop-filter: blur(8px);
+}
+/* Form elements */
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="email"]
+{
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Submit button */
+input[type="submit"] 
+{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for tablets  */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        margin: 15px;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input[type="submit"] {
+        font-size: 16px;
+    }
+}
+
+/* Responsive design for smartphones */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+        margin: 10px;
+        max-width: 95%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+    }
+
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+}
