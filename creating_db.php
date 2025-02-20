@@ -7,14 +7,6 @@ $password = "";
 
 $conn = mysqli_connect($servername, $username, $password);
 $sql ="CREATE DATABASE mpn";
-
-$sql2="DROP nabin";
-$result2 = mysqli_query($conn, $sql2);
-if($result2)
-{
-    echo "Sucessfully deleated";
-}
-
 $result = mysqli_query($conn, $sql);
 if($result)
 {
