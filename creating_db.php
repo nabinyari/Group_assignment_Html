@@ -45,6 +45,21 @@ if($result)
                     {
                         die("Filed to create ". mysqli_error($conn));
                     }
+                $sql5 = "CREATE TABLE feedback (
+                        id INT(11) AUTO_INCREMENT PRIMARY KEY,
+                        email VARCHAR(255) NOT NULL,
+                        feedback TEXT NOT NULL,
+                        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                    )";
+                $result5 = mysqli_query($conn, $sql5);
+                if($result)
+                {
+                    echo "Created successfully";
+                }
+                else
+                {
+                    die("Filed to create ". mysqli_error($conn));
+                }
             }
             else
             {
